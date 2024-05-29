@@ -11,6 +11,12 @@ view: distribution_centers {
     type: number
     sql: ${TABLE}.latitude ;;
   }
+  dimension: location {
+    type: location
+    sql_latitude: ${latitude} ;;
+    sql_longitude: ${longitude} ;;
+  }
+
   dimension: longitude {
     type: number
     sql: ${TABLE}.longitude ;;
